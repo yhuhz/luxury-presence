@@ -58,24 +58,47 @@
     </style>
   </head>
   <body class="text-center">
-    <header class="mb-auto px-5 pt-2 fixed-top" id="main-header">
-      <div>
-        <a href="#">
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top px-5 bg-transparent"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#landing" id="navBrand">
           <img
             class="float-md-start mb-0 logo-img"
             src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/blob-6c0c2e0.png"
             width="auto"
             height="50px"
+            style="filter: brightness(0) invert(1)"
           />
         </a>
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link" href="#landing">Home</a>
-          <a class="nav-link" href="#about">Why Us</a>
-          <a class="nav-link" href="#services">Services</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </nav>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#landing">Home</a>
+              <!-- text-white class -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
+
     <div
       class="cover-container d-flex w-100 p-3 mx-auto flex-column"
       id="landing"
@@ -607,7 +630,7 @@
       <div class="row mb-2 px-5">
         <div class="col-md-6">
           <div
-            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative service-card"
           >
             <div class="col p-4 d-flex flex-column position-static">
               <h3 class="mb-3">Commercial & Residential</h3>
@@ -618,7 +641,7 @@
                 you find where to put you hard-earned dollars.
               </p>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-xl-block">
               <svg
                 class="bd-placeholder-img"
                 width="300"
@@ -639,7 +662,7 @@
         </div>
         <div class="col-md-6">
           <div
-            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative service-card"
           >
             <div class="col p-4 d-flex flex-column position-static">
               <h3 class="mb-0">Rely on Expertise</h3>
@@ -650,7 +673,7 @@
                 confident and educated every step of the way.
               </p>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-xl-block">
               <svg
                 class="bd-placeholder-img"
                 width="300"
