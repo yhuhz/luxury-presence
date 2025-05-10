@@ -2,6 +2,25 @@
  * Globals
  */
 
+html {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Default (mobile) - normal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  /* Lock body scroll */
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -14,14 +33,19 @@
  * Base structure
  */
 
-body {
+.cover-container {
   position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
-body::before {
+.cover-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -31,13 +55,37 @@ body::before {
   background: url('https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/mtn%20falls%20pond.jpg/:/rs=w:1535,m')
     no-repeat center center;
   background-size: cover;
-  opacity: 0.5; /* Adjust for desired transparency */
-  z-index: -1; /* Keep it behind other content */
+  filter: brightness(50%); /* Reduce brightness to darken */
+  z-index: -1;
 }
 
 /*
  * Header
  */
+
+/* Default light text (for dark backgrounds) */
+#main-header,
+#main-header .nav-link,
+#main-header .logo-img {
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+/* Dark text variant (for light backgrounds) */
+#main-header.dark-text,
+#main-header.dark-text .nav-link {
+  color: #333 !important;
+}
+
+/* Image filter for light backgrounds */
+#main-header.dark-text .logo-img {
+  filter: brightness(0) invert(0); /* Normal (dark) logo */
+}
+
+/* Image filter for dark backgrounds */
+#main-header:not(.dark-text) .logo-img {
+  filter: brightness(0) invert(1); /* White logo */
+}
 
 .nav-masthead .nav-link {
   padding: 0.25rem 0;
@@ -65,9 +113,95 @@ body::before {
   filter: invert(1) !important;
 }
 
+.nav-link:hover {
+  color: bisque !important;
+}
+
+/* 
+* Main
+*/
+
 main {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(1px);
   border-radius: 8px;
   max-width: 42em;
+}
+
+@media (min-width: 992px) {
+  #about {
+    height: 100vh;
+    overflow: scroll;
+  }
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.carousel-item svg {
+  filter: brightness(60%);
+}
+
+.featured-column {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.featured-column:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 991px) {
+  .featured-column {
+    padding-bottom: 1.5rem;
+  }
+  .bd-placeholder-img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Ensure proper spacing */
+.mx-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}
+.my-1 {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .featured-heading {
+    font-size: 2rem;
+  }
+  .featured-text {
+    font-size: 1.1rem;
+  }
 }
