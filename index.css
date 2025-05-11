@@ -43,19 +43,6 @@ h3 {
 * Navbar
 */
 
-.navbar-light .navbar-nav .nav-link.text-white {
-  color: white !important;
-}
-
-.navbar-light .navbar-nav .nav-link.text-white:hover,
-.navbar-light .navbar-nav .nav-link.text-white:focus {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-
-.navbar-light .navbar-nav .nav-link.active.text-white {
-  font-weight: 500;
-}
-
 /* Navbar background color for mobile and tablet */
 @media (max-width: 1024px) {
   .navbar-light {
@@ -266,17 +253,6 @@ main {
   margin-bottom: 40px;
 }
 
-.form-control {
-  color: white !important;
-}
-.form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: white !important;
-  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1) !important;
-}
 .office-info {
   margin-bottom: 30px;
 }
