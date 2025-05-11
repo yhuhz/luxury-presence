@@ -242,7 +242,12 @@ main {
 }
 
 .service-card {
-  height: 300px !important;
+  height: 300px;
+}
+
+.card-text {
+  height: 200px !important;
+  overflow: auto;
 }
 
 /* 
