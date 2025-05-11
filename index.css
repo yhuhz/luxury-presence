@@ -90,6 +90,11 @@ main {
   #services {
     height: 100vh;
   }
+
+  #contact {
+    height: 100vh;
+    overflow: scroll;
+  }
 }
 
 #services {
@@ -228,4 +233,39 @@ main {
 
 .service-card {
   height: 300px !important;
+}
+
+/* 
+* Contact
+*/
+.form-section {
+  margin-bottom: 40px;
+}
+.whatsapp-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.office-info {
+  margin-bottom: 30px;
+}
+.hours-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.hours-list li {
+  margin-bottom: 5px;
+}
+.hours-list li:before {
+  content: '✔';
+  margin-right: 10px;
+  color: #28a745;
+}
+.footer-note {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #dee2e6;
 }
