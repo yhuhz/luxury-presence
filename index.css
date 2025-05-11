@@ -2,15 +2,19 @@
  * Globals
  */
 
+/* Colors */
+/* #ffe593 */
+/* #ffddc8 */
+
 html {
   ::-webkit-scrollbar {
     display: none;
   }
 }
 
-/* Default (mobile) - normal scrolling */
 body {
   overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 @media (min-width: 1025px) {
@@ -19,6 +23,20 @@ body {
     overflow: hidden;
     height: 100vh;
   }
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-gold {
+  color: #ffe593 !important;
+}
+
+.text-warm {
+  color: #ffddc8 !important;
 }
 
 /* 
@@ -97,6 +115,11 @@ main {
   }
 }
 
+#title {
+  font-family: Cinzel, sans-serif !important;
+  color: #ffe593 !important;
+}
+
 #services {
   overflow-x: hidden;
 }
@@ -124,7 +147,7 @@ main {
 }
 
 .carousel-item img {
-  filter: brightness(60%);
+  filter: brightness(50%);
 }
 
 /* Image wrapper for centering */
@@ -238,8 +261,21 @@ main {
 /* 
 * Contact
 */
+
 .form-section {
   margin-bottom: 40px;
+}
+
+.form-control {
+  color: white !important;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: white !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1) !important;
 }
 .whatsapp-section {
   background-color: #f8f9fa;
@@ -250,17 +286,8 @@ main {
 .office-info {
   margin-bottom: 30px;
 }
-.hours-list {
-  list-style-type: none;
-  padding-left: 0;
-}
-.hours-list li {
-  margin-bottom: 5px;
-}
-.hours-list li:before {
-  content: '✔';
-  margin-right: 10px;
-  color: #28a745;
+#hours {
+  border: 1px solid white;
 }
 .footer-note {
   font-size: 0.8rem;
@@ -268,4 +295,10 @@ main {
   margin-top: 30px;
   padding-top: 15px;
   border-top: 1px solid #dee2e6;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
